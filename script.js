@@ -4,7 +4,6 @@ const songModal = document.getElementById('songModal');
 const songForm = document.getElementById('songForm');
 const cardsGrid = document.getElementById('cardsGrid');
 
-// Cargar las canciones guardadas al abrir la página
 document.addEventListener('DOMContentLoaded', cargarCancionesGuardadas);
 
 openModalBtn.addEventListener('click', () => {
@@ -31,7 +30,7 @@ songForm.addEventListener('submit', (e) => {
     const fechaActual = new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long' });
 
     const nuevaCancion = {
-        id: Date.now(), // Identificador único
+        id: Date.now(),
         title: title.toUpperCase(),
         artist,
         songUrl,
@@ -39,10 +38,7 @@ songForm.addEventListener('submit', (e) => {
         date: fechaActual
     };
 
-    // Guardar en localStorage
     guardarEnLocalStorage(nuevaCancion);
-
-    // Agregar a la pantalla
     agregarTarjetaALaPantalla(nuevaCancion);
 
     songForm.reset();
@@ -84,15 +80,11 @@ function guardarEnLocalStorage(song) {
 
 function cargarCancionesGuardadas() {
     let canciones = JSON.parse(localStorage.getItem('misCanciones')) || [];
-    
-    // Si es la primera vez y no hay nada guardado, podemos dejar las de ejemplo o limpiar la grilla.
-    // Aquí limpiamos la grilla fija del HTML para cargar solo lo que esté guardado (o mantener un almacenamiento limpio).
-    if (canciones.length > 0) {
-        cardsGrid.innerHTML = '';
-        canciones.forEach(song => {
-            agregarTarjetaALaPantalla(song);
-        });
-    }
+    cardsGrid.innerHTML = '';
+    canciones.forEach(song => {
+        agregarTarjetaALaPantalla(song);
+    });
+    actualizarContador();
 }
 
 window.eliminarCancion = function(id) {
@@ -100,7 +92,6 @@ window.eliminarCancion = function(id) {
     canciones = canciones.filter(song => song.id !== id);
     localStorage.setItem('misCanciones', JSON.stringify(canciones));
     
-    // Quitar de la pantalla
     const card = document.querySelector(`[data-id='${id}']`);
     if (card) card.remove();
     actualizarContador();
