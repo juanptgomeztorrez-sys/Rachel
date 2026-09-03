@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, mi amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="stars-bg"></div>
+
+    <main class="container">
+        <header class="hero">
+            <div class="icons-top">
+                <span>🦅 </span>
+                <span>🖤 </span>
+                <span>⚡ </span>
+                <span>🌸 </span>
+            </div>
+            <h1></h1>
+            <p class="subtitle">Por Favor Permite Que Mis Ojos Sean Solo Tuyos</p>
+            
+            <div class="counter-badge">
+                <span>🎵 </span>
+            </div>
+
+            <button id="openModalBtn" class="btn-primary">
+                ✦ AGREGAR UNA CANCIÓN ✦
+            </button>
+        </header>
+
+        <section class="collection-section">
+            <h2 class="section-title">TU COLECCIÓN</h2>
+            
+            <div class="cards-grid" id="cardsGrid">
+                <div class="song-card">
+                    <div class="card-thumb">
+                        <span class="yt-badge">YT</span>
+                        <a href="https://www.youtube.com/watch?v=Zi8036voEPg" target="_blank" class="play-overlay">
+                            ▶ Reproducir en YouTube
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>REFLECTION</h3>
+                        <p class="artist">Christina Aguilera</p>
+                        <blockquote class="quote">
+                            "Para ti, que eres tan valiente como Mulan 🌸"
+                        </blockquote>
+                        <div class="card-footer">
+                            <span class="date">📅 2 de septiembre</span>
+                            <button class="btn-delete">quitar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-card">
+                    <div class="card-thumb">
+                        <span class="yt-badge">YT</span>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-overlay">
+                            ▶ Reproducir en YouTube
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>MAKE IT SHINE</h3>
+                        <p class="artist">Victoria Justice</p>
+                        <blockquote class="quote">
+                            "Tienes todo el brillo de Tori y la actitud de Jade ⚡"
+                        </blockquote>
+                        <div class="card-footer">
+                            <span class="date">📅 2 de septiembre</span>
+                            <button class="btn-delete">quitar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-card">
+                    <div class="card-thumb">
+                        <span class="yt-badge">YT</span>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-overlay">
+                            ▶ Reproducir en YouTube
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>BRAND NEW DAY</h3>
+                        <p class="artist">Van Morrison</p>
+                        <blockquote class="quote">
+                            "Cada día contigo es un mundo nuevo 💜"
+                        </blockquote>
+                        <div class="card-footer">
+                            <span class="date">📅 2 de septiembre</span>
+                            <button class="btn-delete">quitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-poetic">
+            <p>✦ Con Toda Mi Estima ✦</p>
+            <p class="sub-footer">Que De Corazon Te Guste
+    </main>
+
+    <div id="songModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h3>Agregar nueva canción</h3>
+            <form id="songForm">
+                <input type="text" id="songTitle" placeholder="Título de la canción" required>
+                <input type="text" id="songArtist" placeholder="Artista" required>
+                <input type="url" id="songUrl" placeholder="Link de YouTube (ej. https://youtube.com/...)" required>
+                <input type="text" id="songQuote" placeholder="Nota dedicada o cita especial..." required>
+                <button type="submit" class="btn-primary">Guardar Canción</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
