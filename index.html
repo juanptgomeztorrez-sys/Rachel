@@ -20,7 +20,7 @@
                 <span>🌸 </span>
             </div>
             <h1></h1>
-            <p class="subtitle">Por Favor Permite Que Mis Ojos Sean Solo Tuyos</p>
+            <p class="subtitle">Por Favor Permite Que Mis Ojos Sayn Solo Tuyos</p>
             
             <div class="counter-badge">
                 <span>🎵 </span>
@@ -35,7 +35,7 @@
             <h2 class="section-title">TU COLECCIÓN</h2>
             
             <div class="cards-grid" id="cardsGrid">
-                <div class="song-card">
+                <div class="song-card" data-id="1">
                     <div class="card-thumb">
                         <span class="yt-badge">YT</span>
                         <a href="https://www.youtube.com/watch?v=Zi8036voEPg" target="_blank" class="play-overlay">
@@ -50,12 +50,12 @@
                         </blockquote>
                         <div class="card-footer">
                             <span class="date">📅 2 de septiembre</span>
-                            <button class="btn-delete">quitar</button>
+                            <button class="btn-delete" onclick="eliminarCancion(1)">quitar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="song-card">
+                <div class="song-card" data-id="2">
                     <div class="card-thumb">
                         <span class="yt-badge">YT</span>
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-overlay">
@@ -70,12 +70,12 @@
                         </blockquote>
                         <div class="card-footer">
                             <span class="date">📅 2 de septiembre</span>
-                            <button class="btn-delete">quitar</button>
+                            <button class="btn-delete" onclick="eliminarCancion(2)">quitar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="song-card">
+                <div class="song-card" data-id="3">
                     <div class="card-thumb">
                         <span class="yt-badge">YT</span>
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-overlay">
@@ -90,7 +90,7 @@
                         </blockquote>
                         <div class="card-footer">
                             <span class="date">📅 2 de septiembre</span>
-                            <button class="btn-delete">quitar</button>
+                            <button class="btn-delete" onclick="eliminarCancion(3)">quitar</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,8 @@
 
         <footer class="footer-poetic">
             <p>✦ Con Toda Mi Estima ✦</p>
-            <p class="sub-footer">Que De Corazon Te Guste
+            <p class="sub-footer">Que De Corazon Te Guste</p>
+        </footer>
     </main>
 
     <div id="songModal" class="modal">
